@@ -1,0 +1,56 @@
+// 分页样式
+.el-pagination.is-background{
+	text-align: center;
+  /* margin-left:394px; */
+  padding-top:20px;
+}
+.el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev, .el-pagination.is-background .el-pager li{
+  background-color: white;
+}
+.el-pagination.is-background .el-pager li:not(.disabled).active{
+  background: rgba(208,190,136,1);
+}
+.el-pagination{
+  padding: 0 5px;
+}
+
+// 修改tab栏的样式
+.tabs {
+  .el-tabs__item {
+    width: 80px;
+    height: 24px;
+    line-height: 24px;
+    padding: 0px;
+    text-align: center;
+    margin-right: 55px;
+  }
+  #tab-second.el-tabs__nav.is-top {
+    border: 0;
+  }
+  .el-tabs__item.is-active {
+    font-family: PingFang-SC-Bold;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+    background-color: #d0be88;
+  }
+  .el-tabs__header {
+    margin: 0 0 28px;
+  }
+  //清除边框
+  .el-tabs--card > .el-tabs__header .el-tabs__nav {
+    border: 0px;
+  }
+  .el-tabs--card > .el-tabs__header {
+    border-bottom: 0px;
+  }
+  .el-tabs--card > .el-tabs__header .el-tabs__item {
+    border-bottom: 0px;
+    border-left: 0px;
+  }
+  .el-tabs--top.el-tabs--card .el-tabs__item:nth-child(2) {
+    padding-left: 0px;
+  }
+  .el-tabs--top.el-tabs--card .el-tabs__item:last-child {
+    padding-right: 0px;
+  }
+}

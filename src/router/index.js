@@ -17,5 +17,17 @@ export default new Router({
       component: () => import('@/views/demo/form'),
       meta: {}
     },
+    {
+      path: '/demo/list',
+      name: 'demoList',
+      component: () => import('@/views/demo/list'),
+      meta: {}
+    },
+    {
+      path: '/demo/tablist',
+      name: 'demoTablist',
+      component: () => import('@/views/demo/tablist'),
+      meta: {}
+    },
   ]
 })
