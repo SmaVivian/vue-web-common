@@ -29,5 +29,11 @@ export default new Router({
       component: () => import('@/views/demo/tablist'),
       meta: {}
     },
+    {
+      path: '/demo/login',
+      name: 'demoLogin',
+      component: () => import('@/views/demo/login'),
+      meta: {}
+    },
   ]
 })
