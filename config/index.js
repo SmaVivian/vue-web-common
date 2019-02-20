@@ -10,14 +10,14 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    // proxyTable: {},
-    proxyTable: {
-      '/admin': {
-        changeOrigin: true,
-        // target: 'http://192.168.5.102:8082',
-        target: 'http://192.168.5.199:88'  // 邮政
-      }
-    },
+    proxyTable: {},
+    // proxyTable: {
+    //   '/admin': {
+    //     changeOrigin: true,
+    //     // target: 'http://192.168.5.102:8082',
+    //     target: 'http://192.168.5.199:88'  // 邮政
+    //   }
+    // },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

@@ -10,7 +10,7 @@
         <div class="box">
           <router-link tag="div" class="item"
             v-for="(item, index) in dataList"
-            :to="{path: '/information/detail', query: {id: item.id}}"
+            :to="{path: '/demo/detail', query: {id: item.id}}"
             :key="index">
             <div class="item-img">
               <img :src="item.picUrl || ''" alt="" :onerror="defaultImg">

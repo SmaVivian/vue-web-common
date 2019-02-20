@@ -66,7 +66,19 @@ export default new Router({
       path: '/demo/tablist',
       name: 'demoTablist',
       component: () => import('@/views/demo/tablist'),
-      meta: {}
+      meta: {rank: 2 }
+    },
+    {
+      path: '/demo/searchlist',
+      name: 'demoSearchlist',
+      component: () => import('@/views/demo/search'),
+      meta: {rank: 2 }
+    },
+    {
+      path: '/demo/detail',
+      name: 'demoDetail',
+      component: () => import('@/views/demo/detail'),
+      meta: {rank: 3}
     },
     {
       path: '/demo/login',
