@@ -79,7 +79,8 @@
         }
         this.$store.dispatch('LoginUser', {
           loginName: this.name,
-          password: 'dc483e80a7a0bd9ef71d8cf973673924',
+          password: this.pass,
+          // password: 'dc483e80a7a0bd9ef71d8cf973673924',
           // password: md5(this.$salt + this.pass),
           verification: this.code,
           checked: this.checked

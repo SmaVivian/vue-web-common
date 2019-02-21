@@ -12,7 +12,7 @@ import store from '@/store'
 import '@/utils/filters'
 import request from '@/utils/request'
 Vue.prototype.$http = request
-Vue.prototype.$salt = 'tj720'
+// Vue.prototype.$salt = 'tj720'
 
 Vue.use(ElementUI)
 

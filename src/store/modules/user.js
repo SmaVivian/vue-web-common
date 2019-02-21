@@ -44,7 +44,8 @@ const user = {
     // 用户名登录
     LoginUser({ commit }, userInfo) {
       return new Promise((resolve, reject) => {
-        this._vm.$http.get("/postLogin.do", userInfo).then((res)=>{
+        // this._vm.$http.get("/postLogin.do", userInfo).then((res)=>{
+        this._vm.$http.post("/web/login", userInfo).then((res)=>{
           if(res.success==1) {
             commit('SET_LOGIN_VERTIFY', false);
             commit('SET_USER_PHONE', res.data.phone);
@@ -76,7 +77,7 @@ const user = {
           }else{
             commit('SET_LOGIN_VERTIFY', true);
             Cookies.set('showVertify', '1', { expires: 7 });
-            this._vm.$message.error(res.error.message);
+            this._vm.$message.error(res.msg);
             reject();
           }
         }, error => {
