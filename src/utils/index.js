@@ -1,5 +1,6 @@
 /**
- * Created by jiachenpan on 16/11/18.
+ * parseTime(time, '{y}-{m}-{d}')
+ * parseTime(time, '{y}-{m}-{d} {h}:{i}:{s}')
  */
 
 export function parseTime(time, cFormat) {
