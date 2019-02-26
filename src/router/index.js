@@ -45,7 +45,7 @@ export default new Router({
       component: HelloWorld
     },
     {
-      path: '/demo/index',
+      path: '/demo',
       name: 'demo',
       component: () => import('@/views/demo/index'),
       meta: {rank: 1 }
@@ -84,6 +84,18 @@ export default new Router({
       path: '/demo/login',
       name: 'demoLogin',
       component: () => import('@/views/demo/login'),
+      meta: {}
+    },
+    {
+      path: '/demo/swiper',
+      name: 'demoSwiper',
+      component: () => import('@/views/demo/swiper'),
+      meta: {}
+    },
+    {
+      path: '/demo/swiper/thumbs',
+      name: 'demoSwiperThumbs',
+      component: () => import('@/views/demo/swiperThumbs'),
       meta: {}
     },
   ]
