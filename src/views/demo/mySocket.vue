@@ -1,8 +1,14 @@
 <template>
   <div>
-    <div>
-      <input type="text" v-model="msg">
-      <button @click='Login'>向8000端口发送数据</button>
+    <ul>
+      <li v-for="(item, index) in listData" :key="index">
+        {{item.name}}说：{{item.msg}}
+      </li>
+    </ul>
+    <div style="margin-top: 30px;">
+      <input type="text" v-model="params.name" placeholder="姓名" style="width:200px;">
+      <input type="text" v-model="params.msg" placeholder="内容">
+      <button @click='chat'>向8000端口发送数据</button>
       {{backdata}}
     </div>
 
@@ -10,26 +16,35 @@
 </template>
 <script>
 export default{
-  data:function (){
+  data() {
     return {
-      msg:"aaaa",
-      backdata:'',
+      listData: [],
+      params: {
+        name: 'admin',
+        msg: '测试',
+      },
+      backdata: '',
     }
   },
   sockets:{ //在此接收又服务器发送过来的数据 ps：注意此处的方法名要与服务器的发送的事件保持一致才能接收到
-   connect:function() {      //与ws:127.0.0.1:8000连接后回调
-    console.log('连接成功');
-   },
-   loginmsg:function(value) {
-    console.log(value);//监听login(后端向前端emit login的回调)
-    this.backdata=value;
-   }
+    connect:function() {      //与ws:127.0.0.1:8000连接后回调
+      console.log('连接成功')
+    },
+    chatMsg:function(value) {
+      console.log(value)//监听login(后端向前端emit login的回调)
+      this.backdata=value
+
+      this.listData.push(value)
+    }
   },
   methods:{
-    Login(){
-      this.$socket.emit('login',this.msg);
+    chat(){
+      this.$socket.emit('chat', this.params)
     }
-  }
+  },
+  mounted() {
+    this.$socket.emit('chat', '')
+  },
 
  }
 </script>
