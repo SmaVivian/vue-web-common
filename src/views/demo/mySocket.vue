@@ -42,7 +42,7 @@ export default{
       this.$socket.emit('chat', this.params)
     }
   },
-  mounted() {
+  activated() {
     this.$socket.emit('chat', '')
     // ajax 首次获取最近的消息
     this.listData =[
@@ -61,6 +61,9 @@ export default{
     ]
 
   },
-
+  deactivated() {
+    // 为缓存组件时需加上  一般情况下不用缓存  该项目使用了keep-alive 故要加上
+    this.$socket.emit('close', '')
+  },
  }
 </script>
