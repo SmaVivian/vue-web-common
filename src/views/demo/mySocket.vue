@@ -26,24 +26,40 @@ export default{
       backdata: '',
     }
   },
-  sockets:{ //在此接收又服务器发送过来的数据 ps：注意此处的方法名要与服务器的发送的事件保持一致才能接收到
-    connect:function() {      //与ws:127.0.0.1:8000连接后回调
+  sockets: { //在此接收又服务器发送过来的数据 ps：注意此处的方法名要与服务器的发送的事件保持一致才能接收到
+    connect: function() {      //与ws:127.0.0.1:8000连接后回调
       console.log('连接成功')
     },
-    chatMsg:function(value) {
+    chatMsg: function(value) {
       console.log(value)//监听login(后端向前端emit login的回调)
       this.backdata=value
 
       this.listData.push(value)
     }
   },
-  methods:{
-    chat(){
+  methods: {
+    chat() {
       this.$socket.emit('chat', this.params)
     }
   },
   mounted() {
     this.$socket.emit('chat', '')
+    // ajax 首次获取最近的消息
+    this.listData =[
+      {
+        name: 'Jane',
+        msg: '消息1'
+      },
+      {
+        name: 'Vivi',
+        msg: '消息2'
+      },
+      {
+        name: 'XiaoMing',
+        msg: '消息3'
+      },
+    ]
+
   },
 
  }
