@@ -14,9 +14,13 @@ import request from '@/utils/request'
 Vue.prototype.$http = request
 // Vue.prototype.$salt = 'tj720'
 
-import VueSocketio from 'vue-socket.io';
-import socketio from 'socket.io-client';
-Vue.use(VueSocketio, socketio('ws://127.0.0.1:8000'));//与socket服务端链接
+// import VueSocketio from 'vue-socket.io';
+// import socketio from 'socket.io-client';
+// Vue.use(VueSocketio, socketio('ws://127.0.0.1:8000'));//与socket服务端链接
+
+// import io from 'socket.io-client'
+// const socket = io.connect('http://127.0.0.1:8000')
+// this.$socket = socket
 
 Vue.use(ElementUI)
 

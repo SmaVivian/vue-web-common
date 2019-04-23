@@ -5,7 +5,6 @@ var timer
 io.on('connection', function (socket) {
   socket.on('chat', function (data) { //接收连接中的chat事件
     console.log('连接', data);
-    console.log(timer)
 
     // io.emit('chatMsg', '你发过来的数据是：' + data) //发送回去 事件名为chatMsg
     io.emit('chatMsg', data) //发送回去 事件名为chatMsg
