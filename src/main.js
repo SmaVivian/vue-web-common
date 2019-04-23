@@ -1,7 +1,7 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import ElementUI from 'element-ui'  
+import ElementUI from 'element-ui'
 import Cookies from 'js-cookie'
 // import 'element-ui/lib/theme-chalk/index.css'
 import App from './App'
@@ -13,6 +13,10 @@ import '@/utils/filters'
 import request from '@/utils/request'
 Vue.prototype.$http = request
 // Vue.prototype.$salt = 'tj720'
+
+import VueSocketio from 'vue-socket.io';
+import socketio from 'socket.io-client';
+Vue.use(VueSocketio, socketio('ws://127.0.0.1:8000'));//与socket服务端链接
 
 Vue.use(ElementUI)
 

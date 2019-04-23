@@ -9,7 +9,7 @@ Vue.mixin({
   beforeRouteLeave:function(to, from, next){
     //此处判断是如果返回上一层，你可以根据自己的业务更改此处的判断逻辑，酌情决定是否摧毁本层缓存。
     if (from && from.meta.rank && to.meta.rank && from.meta.rank>to.meta.rank) {
-      
+
       if (this.$vnode && this.$vnode.data.keepAlive) {
         if (this.$vnode.parent && this.$vnode.parent.componentInstance && this.$vnode.parent.componentInstance.cache) {
           if (this.$vnode.componentOptions)
@@ -96,6 +96,12 @@ export default new Router({
       path: '/demo/swiper/thumbs',
       name: 'demoSwiperThumbs',
       component: () => import('@/views/demo/swiperThumbs'),
+      meta: {}
+    },
+    {
+      path: '/demo/mySocket',
+      name: 'demoMySocket',
+      component: () => import('@/views/demo/mySocket'),
       meta: {}
     },
   ]
