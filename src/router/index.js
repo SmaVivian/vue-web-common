@@ -101,7 +101,7 @@ export default new Router({
     {
       path: '/demo/mySocket',
       name: 'demoMySocket',
-      component: () => import('@/views/demo/mySocket'),
+      component: () => import('@/views/demo/mySocket1'),
       meta: {}
     },
   ]
