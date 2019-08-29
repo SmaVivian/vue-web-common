@@ -72,14 +72,14 @@ import { parseTime } from '@/utils/index'
 import { validate } from '@/utils/validate'
 export default {
   data() {
-    let validatePhoneNo = (rule, value, callback) => {
+    const validatePhoneNo = (rule, value, callback) => {
       if(!validate(value, 'phone')) {
         callback(new Error('手机号不存在'))
       } else {
         callback()
       }
     }
-    let checkAge = (rule, value, callback) => {
+    const checkAge = (rule, value, callback) => {
       if (!value) {
         return callback(new Error('年龄不能为空'))
       }
@@ -95,7 +95,7 @@ export default {
         }
       }, 1000)
     }
-    let validatePass = (rule, value, callback) => {
+    const validatePass = (rule, value, callback) => {
       if (value === '') {
         callback(new Error('请输入密码'))
       } else if(!validate(value, 'password')) {
@@ -107,7 +107,7 @@ export default {
         callback()
       }
     }
-    let validatePass2 = (rule, value, callback) => {
+    const validatePass2 = (rule, value, callback) => {
       if (value === '') {
         callback(new Error('请再次输入密码'))
       } else if (value !== this.ruleForm.pass) {
