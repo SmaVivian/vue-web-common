@@ -42,7 +42,8 @@ export default new Router({
     {
       path: '/',
       name: 'HelloWorld',
-      component: HelloWorld
+      redirect: '/demo',
+      // component: HelloWorld
     },
     {
       path: '/demo',
