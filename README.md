@@ -1,25 +1,38 @@
-# init-vue-pro
+## 简介
 
-> A init vue project
+[vue-element-admin]主要实现web端一些基础的业务代码，基于 [vue](https://github.com/vuejs/vue) 和 [element-ui](https://github.com/ElemeFE/element)实现。
 
-## Build Setup
+## 功能
 
-``` bash
-# install dependencies
-npm install
+- 登录
 
-# serve with hot reload at localhost:8080
+- 列表
+  - 分页
+  - tab列表
+  - 搜索列表
+
+- 详情
+
+- 表单
+
+- 轮播
+
+- 组件缓存（`keep-alive`向前清除缓存、返回不清除缓存）首页->列表->详情：清除缓存  详情->列表：不清除缓存 
+
+## 效果演示
+
+![img](https://github.com/SmaVivian/vue-web-common/blob/master/src/assets/vueWeb.gif)
+
+## 安装依赖
+
+npm i
+
+## 项目启动
+
 npm run dev
 
-# build for production with minification
+## 项目打包
+
 npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
-##效果演示
-![img](https://github.com/SmaVivian/vue-web-common/blob/master/src/assets/vueWeb.gif)
 
