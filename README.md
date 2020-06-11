@@ -36,6 +36,7 @@ npm run dev
 npm run build
 
 ## 本地服务启动 redis启动、easymock项目启动
+安装mongodb https://www.runoob.com/mongodb/mongodb-window-install.html
 redis-server.exe redis.windows.conf
 npm run dev
 
