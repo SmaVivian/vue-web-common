@@ -9,7 +9,7 @@ module.exports = {
 
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: './',  // 之前是 '/'
+    assetsPublicPath: '/',
     proxyTable: {},
     // proxyTable: {
     //   '/admin': {
@@ -50,7 +50,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../docs'),  // 之前是../dist
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',  // 之前是 '/'
 
     /**
      * Source Maps
