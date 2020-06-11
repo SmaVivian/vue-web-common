@@ -17,7 +17,7 @@
 
 - 轮播
 
-- 组件缓存（`keep-alive`向前清除缓存、返回不清除缓存）首页->列表->详情：清除缓存  详情->列表：不清除缓存 
+- 组件缓存（`keep-alive`向前清除缓存、返回不清除缓存）首页->列表->详情：清除缓存  详情->列表：不清除缓存
 
 ## 效果演示
 
@@ -34,5 +34,13 @@ npm run dev
 ## 项目打包
 
 npm run build
+
+## 本地服务启动 redis启动、easymock项目启动
+redis-server.exe redis.windows.conf
+npm run dev
+
+## 已使用github pages部署
+访问 https://smavivian.github.io/vue-web-common
+
 
 
