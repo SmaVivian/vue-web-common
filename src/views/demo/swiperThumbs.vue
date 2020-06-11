@@ -63,7 +63,9 @@
     },
     methods: {
       getData() {
-        this.swiperSlides = ['https://www.swiper.com.cn/demo/img/nature1.jpg', 'https://www.swiper.com.cn/demo/img/nature2.jpg', 'https://www.swiper.com.cn/demo/img/nature3.jpg', 'https://www.swiper.com.cn/demo/img/nature4.jpg', 'https://www.swiper.com.cn/demo/img/nature5.jpg', 'https://www.swiper.com.cn/demo/img/nature6.jpg']
+        // this.swiperSlides = ['https://www.swiper.com.cn/demo/img/nature1.jpg', 'https://www.swiper.com.cn/demo/img/nature2.jpg', 'https://www.swiper.com.cn/demo/img/nature3.jpg', 'https://www.swiper.com.cn/demo/img/nature4.jpg', 'https://www.swiper.com.cn/demo/img/nature5.jpg', 'https://www.swiper.com.cn/demo/img/nature6.jpg']
+
+        this.swiperSlides = ['https://github.surmon.me/vue-awesome-swiper/static/images/surmon-1.jpg', 'https://github.surmon.me/vue-awesome-swiper/static/images/surmon-6.jpg', 'https://github.surmon.me/vue-awesome-swiper/static/images/surmon-7.jpg','https://github.surmon.me/vue-awesome-swiper/static/images/surmon-8.jpg','https://github.surmon.me/vue-awesome-swiper/static/images/surmon-3.jpg','https://github.surmon.me/vue-awesome-swiper/static/images/surmon-4.jpg','https://github.surmon.me/vue-awesome-swiper/static/images/surmon-5.jpg']
       }
     },
     created() {
